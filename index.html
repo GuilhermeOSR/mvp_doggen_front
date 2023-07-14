@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogGen - Clube Dourado</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/026772c9c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/golden.svg">
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="logo">
+                <img src="./imgs/golden.svg" height="120" width="120" alt="" id="logo">
+            </nav>
+        </header>
+    <section class="container newDog">
+        <div class="menu">
+            <div class="btn-plus">
+                <a href="" class="btn-add" onclick="toggleForm(), toggleButton()"><i class="fa-sharp fa-solid fa-plus add-icon"></i>Cadastrar Cachorro</a>
+            </div> 
+            <div class="search">
+                <a id="send" onclick="searchDog()" href=""  style="text-decoration: none;" class="btn-search"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+                <input type="text" class="input-field" id="nomeCachorro">
+                <ul id="autocomplete-results"></ul>
+            </div>
+        </div>
+    <section class="addDog hideForm animate__animated">
+        <div class="contentAddDog">
+            <h2 style="color: #8B4A1E;">Dados do cachorro: </h2>
+            <div class="input-field2">
+                <input type="text" id="newDog" placeholder="Nome">
+                <input type="text" id="newRace" placeholder="Raça">
+                <input type="text" id="newTutor" placeholder="Tutor">
+                <input type="date" id="newIdade" placeholder="Idade (Ex: 16/11/2023)">
+            </div>
+            <button class="btn-newDog" onclick="newItem()">Adicionar</button>
+        </div>
+    </section>
+       <section class="table">
+        <table id="myTable">
+            <thead>
+            <tr class="TitulosT">
+              <th><i class="fa-solid fa-bone"></i> <span class="txtTable">Nome</span></th>
+              <th><i class="fa-solid fa-receipt"></i> <span class="txtTable">Raça</span></th>
+              <th><i class="fa-solid fa-user"></i> <span class="txtTable">Tutor</span></th>
+              <th><i class="fa-solid fa-calendar-days"></i> <span class="txtTable">Nascimento</th>
+              <th><i class="fa-solid fa-trash"></i></th>
+            </tr>
+            </thead>
+
+            <tbody id="dogbuscado">
+              <tr id="resultadoCachorro">
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <script src="behavior.js"></script>
+</body>
+</html>
