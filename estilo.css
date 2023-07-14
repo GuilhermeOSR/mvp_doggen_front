@@ -1,3 +1,4 @@
+/* Configs */
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +14,10 @@ body {
     background: #FFEFCB;
 }
 
+/* Header */
+
+
+
 header nav {
     position: relative;
     display: flex;
@@ -20,8 +25,11 @@ header nav {
     justify-content: center;
     background-color: #B36A39;
     height: 6rem;
-    
 }
+
+  #logo {
+    cursor: pointer;
+  }
 
 header nav h1 {
     margin-left: 1rem;
@@ -34,13 +42,14 @@ header nav img {
     top: 10%;
 }
 
+/* Main */
+ 
 section.container {
     max-width: 960px;
     margin: 0 auto;
     height: 70vh;
     margin: 5% auto;
     background-color: #B36A39;
-
 }
 
 section.container .menu {
@@ -49,7 +58,6 @@ section.container .menu {
     justify-content: space-between;
     align-items: center;
     min-width: 400px;
- 
 }
 
 section.container .menu .btn-add {
@@ -105,7 +113,7 @@ section.container .menu .search {
     font-size: 20px;
 }
 
-/* Animação do botão */
+/* AddDog Section */
 
 section.addDog {
     width: 100%;
@@ -167,10 +175,13 @@ section.addDog .input-field2 ::-webkit-input-placeholder {
     opacity: 0.42;
 }
 
+/* Table Section */
+
 .table 
     {
         max-height: 40vh;
         overflow-y: scroll;
+        
     }
 
 #myTable {
@@ -186,6 +197,7 @@ section.addDog .input-field2 ::-webkit-input-placeholder {
 tr:nth-child(odd){
     background-color: #8B4A1E;
     color: #fff;
+    
 }
 
 thead {
@@ -198,12 +210,13 @@ thead {
 
 th {
     padding: 10px 20px;
-    margin: 0;
 }
 
 td {
     padding: 10px;
 }
+
+
 
 /* Alterações */
 
@@ -217,12 +230,14 @@ td {
     overflow-y: hidden;
 }
 
-/* input style */
+/* input date style */
 
 .custom-date-input {
     opacity: 0;
     position: absolute;
     z-index: -1;
+    left: 70%;
+    color: blue;
   }
   
   .custom-date-wrapper {
@@ -241,6 +256,7 @@ td {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-left: 5px;
+    
   }
   
   .custom-date-picker {
@@ -251,14 +267,7 @@ td {
     padding: 5px;
   }
 
-  span {
-    cursor: pointer;
-  }
-
-  .txtTable {
-    cursor: auto;
-  }
-
+ 
   /* Estilo para o scroll vertical */
 .table::-webkit-scrollbar {
     width: 8px;
@@ -293,10 +302,32 @@ td {
     background-color: #FDF2DD;
   }
 
-  #logo {
+
+  /* Delete Button */
+
+  span {
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+    
   }
 
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    transition: .3s ease;
+
+  }
+
+  .close:hover {
+    color: red;
+    transition: .3s ease;
+
+  }
+
+  
   /* Estilos para Telas Menores */
 
   @media (max-width: 768px) {

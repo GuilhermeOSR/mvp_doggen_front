@@ -77,10 +77,10 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     let div = this.parentElement.parentElement;
     const nomeItem = div.getElementsByTagName('td')[0].innerHTML
-    if (confirm("Você tem certeza?")) {
+    if (confirm("Você tem certeza que deseja remover esse cachorro?")) {
       div.remove()
       deleteItem(nomeItem)
-      alert("Removido!")
+      alert("Cachorro Removido!")
     }
   }
 }
@@ -177,7 +177,7 @@ const formatIdade = (idade) => {
 Função para pesquisar por nome de cachorro
 --------------------------------------------------------------------------------------
 */
-const searchDog = async () => {
+const searchDog = async (parent) => {
 event.preventDefault();
 let nomeCachorro = document.getElementById("nomeCachorro").value;
 
@@ -227,7 +227,9 @@ fetch(url, {
       novaLinha.appendChild(idadeCachorro);
           // Cria o botão de exclusão para apenas o cachorro buscado
           const deleteButton = document.createElement("span");
-          deleteButton.textContent = "\u00D7";
+          const txt = document.createTextNode("\u00D7");
+          deleteButton.className = "close";
+          deleteButton.appendChild(txt);
           deleteButton.addEventListener("click", () => {
             if (confirm("Você tem certeza?")) {
               novaLinha.remove();
